@@ -1,0 +1,10 @@
+# Authors
+
+XDDS:
+  name  : "XDDS Team"
+  bio   : "Xperience Design - NEXT //"
+  avatar: "/assets/images/authors/bio-xdds.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:xdds@xdlabncs.com"

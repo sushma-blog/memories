@@ -1,0 +1,84 @@
+# Welcome to Jekyll!
+#
+# Site settings
+
+
+title: Sushma Memories
+email: sushma.bommisetty@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Memories of Sushma.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+#theme: minima
+theme: minimal-mistakes-jekyll
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-plantuml-url
+
+plantuml:
+  url:          'http://www.plantuml.com/plantuml' 
+  type:         'svg'
+  ssl_noverify: '0'
+  http_debug:   '0'
+
+# Exclude list
+exclude:
+ - .sass-cache/
+ - .jekyll-cache/
+ - gemfiles/
+ - Gemfile
+ - Gemfile.lock
+ - node_modules/
+ - vendor/bundle/
+ - vendor/cache/
+ - vendor/gems/
+ - vendor/ruby/
+
+# Include list
+include:
+ - _pages
+ - _posts
+
+search: true
+
+# Web analytics
+#analytics:
+#  provider: "google-gtag"
+#  google:
+#    tracking_id: "UA-1234567-8"
+#    anonymize_ip: false # defaul
+
+footer:
+  links:
+    - label: "Gitlab"
+      icon: "fab fa-fw fa-gitlab"
+      url: "https://gitlab.xdlabncs.com/xdds/xdds-portal"
+
+defaults:
+ #_pages
+ - scope:
+    path: ""
+    type: pages
+   values:
+    layout: single
+    classes: wide
+    author_profile: false
+
+ # _posts
+ - scope:
+    path: ""
+    type: posts
+   values:
+    layout: posts
+    author_profile: true
+    read_time: true
+    comments: true
+    share: true
+    related: true
+
+atom_feed:
+  hide: true

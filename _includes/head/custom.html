@@ -1,0 +1,357 @@
+<!-- start custom head snippets -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/xdds/css/flatpickr.min.css" />
+<link rel="stylesheet" href="/assets/xdds/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="/assets/xdds/css/xdds.css" />
+
+<style>
+    pre {
+        font-size: .875rem;
+        color: inherit;
+    }
+    .masthead {
+        box-shadow: 0 .1875rem .3125rem 0 rgba(0,0,0,.025), 0 .25rem .5rem 0 rgba(0,0,0,.05);
+    }
+
+    .masthead__inner-wrap {
+        padding-bottom: .8125rem;
+        padding-top: .8125rem;
+    }
+
+    .greedy-nav a.site-title {
+        color: #181C21;
+        font-size: .8125rem;
+        font-weight: 900;
+    }
+
+    .greedy-nav a {
+        color: #002158;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: .75rem;
+    }
+
+    .greedy-nav a:hover {
+        color: #000C21;
+        text-decoration: none;
+    }
+
+    .search__toggle .fas {
+        margin-top: .3125rem;
+        font-size: .75rem;
+    }
+
+    .page__footer {
+        background-color: #252b33;
+    }
+
+    .sidebar {
+        opacity: 1;
+    }
+
+    .sidebar,
+    .page__inner-wrap {
+        padding-top: 1.5rem;
+    }
+
+
+    @media (min-width: 64em) {
+        .sidebar {
+            padding-right: 1.25rem;
+            width: 200px;
+        }
+        .page {
+            width: calc(100% - 200px);
+        }
+        .page__inner-wrap {
+            padding-left: 1.25rem;
+        }
+    }
+
+    @media (min-width: 80em) {
+        .sidebar {
+            width: 250px;
+        }
+        .page {
+            width: calc(100% - 250px);
+        }
+    }
+
+    .nav__sub-title {
+        color: #181C21;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: .625rem;
+        margin-top: 1.5rem;
+    }
+
+    .nav__list .nav__items a {
+        color: #002158;
+        display: block;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: .75rem;
+        margin-bottom: .1875rem;
+        margin-top: .1875rem;
+    }
+
+    .nav__list .nav__items a:hover {
+        color: #000C21;
+    }
+
+    .page__content p,
+    .page__content div,
+    .page__content li,
+    .page__content dl,
+    .page__content .btn {
+        font-size: .8125rem;
+    }
+
+    .page__content .btn,
+    .page__content table th,
+    .page__content table td {
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .page__content p code,
+    .page__content li code,
+    .page__content table code {
+        font-size: 1.125em;
+    }
+
+    .page__content {
+        padding-top: 1rem;
+    }
+
+    nav[aria-label] .pagination {
+        float: none;
+        margin-top: inherit;
+        padding-top: inherit;
+    }
+
+    .page__title {
+        line-height: 1.2;
+    }
+
+    .page__content h1,
+    .page__content h2,
+    .page__content h3,
+    .page__content h4,
+    .page__content h5,
+    .page__content h6 {
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .page__content h1, .page__content .h1 {
+        font-size: 2.5rem;
+    }
+    .page__content h2, .page__content .h2 {
+        font-size: 2rem;
+    }
+    .page__content h3, .page__content .h3 {
+        font-size: 1.5rem;
+    }
+    .page__content h4, .page__content .h4 {
+        font-size: 1.25rem;
+    }
+    .page__content h5, .page__content .h5 {
+        font-size: 1rem;
+    }
+    .page__content h6, .page__content .h6 {
+        font-size: .875rem;
+    }
+
+    .page__content h1 + p,
+    .page__content h3 + p,
+    .page__content h4 + p,
+    .page__content h5 + p,
+    .page__content h6 + p {
+        margin-top: -1.25rem;
+    }
+
+    .page__content p + h1,
+    .page__content p + h2,
+    .page__content p + h3,
+    .page__content p + h4,
+    .page__content p + h5,
+    .page__content p + h6,
+    .page__content ul + h1,
+    .page__content ul + h2,
+    .page__content ul + h3,
+    .page__content ul + h4,
+    .page__content ul + h5,
+    .page__content ul + h6,
+    .page__content .highlighter-rouge + h1,
+    .page__content .highlighter-rouge + h2,
+    .page__content .highlighter-rouge + h3,
+    .page__content .highlighter-rouge + h4,
+    .page__content .highlighter-rouge + h5,
+    .page__content .highlighter-rouge + h6,
+    .page__content table + h1,
+    .page__content table + h2,
+    .page__content table + h3,
+    .page__content table + h4,
+    .page__content table + h5,
+    .page__content table + h6 {
+        margin-top: 3.5rem;
+    }
+
+    .page__content div.highlighter-rouge,
+    .page__content figure.highlight {
+        margin-bottom: 1.5rem;
+    }
+
+    .page__content table th {
+        padding-bottom: .75rem;
+        padding-top: .75rem;
+    }
+
+    .page__content table th,
+    .page__content table td {
+        padding-left: .75rem;
+        padding-right: .75rem;
+    }
+
+    .page__content table th {
+        font-weight: 500;
+    }
+
+    .page__content table td {
+        border-bottom: 1px solid #e5e8ec;
+    }
+
+    .is-paddingless {
+        padding: 0 !important;
+    }
+
+    .sgds-example-others {
+        width: 100%;
+        margin-top: .75rem;
+        padding: .75rem 1rem;
+        border: 1px solid #ddd;
+        border-bottom: 0;
+        background-color: #fff;
+    }
+
+    .sgds-example-others .cards-image > img {
+        max-width: inherit;
+    }
+
+    .style-link-sm {
+        line-height: 1.5;
+    }
+
+    .page__content p.intro-p {
+        font-size: 1.375rem;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    }
+
+    h1 + .sgds-example-others,
+    h2 + .sgds-example-others,
+    h3 + .sgds-example-others,
+    h4 + .sgds-example-others,
+    h5 + .sgds-example-others,
+    h6 + .sgds-example-others {
+        margin-top: -1rem;
+    }
+
+    .language-html + p {
+        margin-bottom: 3.5rem;
+        margin-top: -1rem;
+    }
+
+    .language-html + p .btn {
+        width: 100%;
+    }
+
+    form {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .page__content footer h2.title {
+        border-bottom: 0;
+        font-size: 1.5rem;
+    }
+
+    .page__content .material-icons,
+    .page__content .accordion-header::after,
+    .page__content table.table-data.table-card > thead > tr > th.sorting::before,
+    .page__content table.table-data.table-card > thead > tr > th.sorting::after,
+    .page__content table.table-data.table-card > thead > tr > th.sorting_asc::before,
+    .page__content table.table-data.table-card > thead > tr > th.sorting_asc::after,
+    .page__content table.table-data.table-card > thead > tr > th.sorting_desc::before,
+    .page__content table.table-data.table-card > thead > tr > th.sorting_desc::after,
+    .page__content table.table-data thead > tr > th.sorting::before,
+    .page__content table.table-data thead > tr > th.sorting::after,
+    .page__content table.table-data thead > tr > th.sorting_asc::before,
+    .page__content table.table-data thead > tr > th.sorting_asc::after,
+    .page__content table.table-data thead > tr > th.sorting_desc::before,
+    .page__content table.table-data thead > tr > th.sorting_desc::after,
+    .page__content .tab-prev::after,
+    .page__content .tab-next::after,
+    .page__content .duplicate-delete-btn::before,
+    .page__content .duplicate-delete-btn-full::before,
+    .page__content .duplicate-delete-btn-input::before,
+    .page__content .upload-delete-btn::before,
+    .page__content .upload-file .filename::before,
+    .page__content .upload-drag .upload-label::before,
+    .page__content .password-visibility::before,
+    .page__content .form-tooltip::before,
+    .page__content .sidenav-links .multi-level > a::after,
+    .page__content .sidenav .mobile-menu::after,
+    .sidemenu-links .multi-level > a::after,
+    .page__content .nav-user-btn::after,
+    .page__content .nav-search-content > .wrapper .clear-search::before,
+    .page__content .nav-inbox-btn::before,
+    .page__content .nav-icon-btn::before,
+    .page__content .nav-links .multi-level > A:not(.btn)::after,
+    .page__content .avatar[data-img-none=true]::after,
+    .page__content a.external::after {
+        font-size: .875rem;
+    }
+
+    .page__content .navigation {
+        position: relative;
+    }
+
+    .page__content .page-header .wrapper .text-area + .btn,
+    .page__content .page-header .wrapper .title + .btn {
+        margin-right: 0;
+    }
+
+    .page-header .wrapper .title {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .page-header:not(.page-header-light):not(.page-header-primary-light):not(.page-header-secondary-light) .wrapper .title {
+        border-bottom: 0;
+        color: #fff;
+    }
+
+    /*
+
+    .sgds-example-others .title {
+        border-bottom: none;
+        margin: inherit;
+        font-size: inherit;
+    }
+    .sgds-example-others a {
+        text-decoration: none!important;
+    }
+
+    .sgds-example-others .breadcrumb {
+       margin-bottom: 0;
+    }
+
+*/
+</style>
+
+<!-- end custom head snippets -->

@@ -1,0 +1,17 @@
+# main menu
+main:
+  - title: "Home"
+    url: /
+  - title: "About Me"
+    url: /about
+  - title: "Posts"
+    url: /posts
+    
+# posts sidebar
+posts:
+  - title: "Pregnancy"
+    url: /pregnancy
+  - title: "Nesya's 1st year"
+    url: /nesya-first-year
+  - title: "Nesya's Milestones"
+    url: /nesya-milestones
